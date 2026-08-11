@@ -24,4 +24,4 @@ jobs:
       - name: Run tests
         working-directory: Day-1/my-ci-cd-project
         run: |
-          pytest tests/
+          python -m pytest tests/
