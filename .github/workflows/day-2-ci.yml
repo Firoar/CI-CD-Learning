@@ -31,7 +31,7 @@ jobs:
       - name: "Linting"
         working-directory: Day-2/my-ci-cd-project
         run: |
-          python -m py_compile app/does-not-exist.py
+          python -m py_compile app/*.py
 
   tests:
     runs-on: ubuntu-latest
