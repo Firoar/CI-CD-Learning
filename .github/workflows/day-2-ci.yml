@@ -3,7 +3,7 @@ name: "Day-2-CI"
 on:
   push:
     paths:
-      - ".github/workflows/day-2-ci.yaml"
+      - ".github/workflows/day-2-ci.yml"
       - "Day-2/**"
 
 jobs:
