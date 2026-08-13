@@ -1,6 +1,10 @@
 name: "Day-1-CI"
 
-on: push
+on:
+  push:
+    paths:
+      - "Day-1/**"
+      - ".github/workflows/day-1-ci.yml"
 
 jobs:
   test:
