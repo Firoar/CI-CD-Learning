@@ -74,6 +74,13 @@ jobs:
           echo "Application : $WAPP_NAME $JAPP_NAME $SAPP_NAME"
           echo "You suuport $CREW"
 
+      - name: "GitHub context"
+        run: |
+          echo "Repository : ${{ github.repository }}"
+          echo "Actor      : ${{ github.actor }}"
+          echo "Branch     : ${{ github.ref }}"
+          echo "Commit     : ${{ github.sha }}"
+
       - name: "build"
         working-directory: Day-2/my-ci-cd-project
         run: |
