@@ -74,6 +74,16 @@ jobs:
           echo "Application : $WAPP_NAME $JAPP_NAME $SAPP_NAME"
           echo "You suuport $CREW"
 
+      - name: "Outputs :). Generate Build Version"
+        id: version
+        run: |
+          VERSION = "1.0.${{ github.run_number }}"
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+
+      - name: "Use build Version"
+        run: |
+          echo "$Build version is ${{ steps.version.outputs.version }}"
+
       - name: "GitHub context"
         run: |
           echo "Repository : ${{ github.repository }}"
