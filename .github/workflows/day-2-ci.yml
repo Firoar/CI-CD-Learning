@@ -77,12 +77,12 @@ jobs:
       - name: "Outputs :). Generate Build Version"
         id: version
         run: |
-          VERSION = "1.0.${{ github.run_number }}"
+          VERSION="1.0.${{ github.run_number }}"
           echo "version=$VERSION" >> $GITHUB_OUTPUT
 
       - name: "Use build Version"
         run: |
-          echo "$Build version is ${{ steps.version.outputs.version }}"
+          echo "Build version is ${{ steps.version.outputs.version }}"
 
       - name: "GitHub context"
         run: |
