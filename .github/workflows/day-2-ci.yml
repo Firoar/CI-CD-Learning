@@ -8,12 +8,11 @@ on:
 
 env:
   WAPP_NAME: JOD-WORKFLOW
+  CREW: "Buggy Pirates"
 
 jobs:
   lint:
     runs-on: ubuntu-latest
-    env:
-      JAPP_NAME: JOD-JOB
     steps:
       - name: "make directory enabled in ubuntu"
         uses: actions/checkout@v4
@@ -59,6 +58,9 @@ jobs:
   build:
     needs: [tests, lint]
     runs-on: ubuntu-latest
+    env:
+      JAPP_NAME: JOD-JOB
+      CREW: "Starw Hat"
 
     steps:
       - name: "make directory available in ubuntu"
@@ -67,8 +69,10 @@ jobs:
       - name: "Envs printing :)"
         env:
           SAPP_NAME: JOD-STEP
+          CREW: "Beast Pirates"
         run: |
           echo "Application : $WAPP_NAME $JAPP_NAME $SAPP_NAME"
+          echo "You suuport $CREW"
 
       - name: "build"
         working-directory: Day-2/my-ci-cd-project
