@@ -53,6 +53,7 @@ jobs:
           python -m pytest tests/
 
   build:
+    needs: [tests, lint]
     runs-on: ubuntu-latest
 
     steps:
